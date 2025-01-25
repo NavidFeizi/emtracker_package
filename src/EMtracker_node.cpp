@@ -150,6 +150,7 @@ private:
 
   void log_position(double t, blaze::StaticVector<double, 3> position, double sample_time)
   {
+    (void) t;
     std::ostringstream oss;
     auto print_with_space_if_positive = [](double value)
     {
