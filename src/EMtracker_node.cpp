@@ -26,7 +26,7 @@ public:
       : Node("emtracker"), count_(0)
   {
     // Set default parameteres and allow it to be overridden by a launch file or command line parameter
-    this->declare_parameter<double>("sample_time", 16E-3);
+    this->declare_parameter<double>("sample_time", 15E-3);
     m_sample_time = this->get_parameter("sample_time").as_double();
     this->declare_parameter<double>("cutoff_freq", 6.6);
     m_cutoff_freq = this->get_parameter("cutoff_freq").as_double();
