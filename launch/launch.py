@@ -7,7 +7,7 @@ def generate_launch_description():
 
     tracker_node = ExecuteProcess(
         cmd=[
-            'taskset', '-c', '2',  # This sets the affinity to CPU core 0
+            'taskset', '-c', '5',  # This sets the affinity to CPU core 0
             # 'gnome-terminal', '--',
             'ros2', 'run', 'emtracker', 'track',
             '--ros-args',
@@ -20,7 +20,7 @@ def generate_launch_description():
 
     plotjuggler_node = ExecuteProcess(
         cmd=[
-            # 'taskset', '-c', '2',  # This sets the affinity to CPU core 0
+            # 'taskset', '-c', '5',  # This sets the affinity to CPU core 0
             # 'gnome-terminal', '--',
             'ros2', 'run', 'plotjuggler', 'plotjuggler',
             '--ros-args',
